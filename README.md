@@ -6,9 +6,9 @@
     <img src="images/confluent.png" width=50% height=50%>
 </div>
 
-# <div align="center">Radian Demo and Workshop repository</div>
+# <div align="center">'Customer' Demo and Workshop repository</div>
 
-This repository contains workshop content for Radian to be held on <b>10/26</b>. Content with the lab instructions and hands-on guide will be updated before the workshop. Please see below for the details of the workshop and agenda: 
+This repository contains workshop content for xxxxxx to be held on <b>mm/dd</b>. Content with the lab instructions and hands-on guide will be updated before the workshop. Please see below for the details of the workshop and agenda: 
 
 ## Introduction
 
@@ -23,14 +23,14 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 
 | Topic |  Time  | Speaker |
 | --- |  ---  | --- |
-| Workshop Kickoff and Introductions|  10:00 - 10:30  | Brian Narajowski - Radian |
-| Review Radian Use Cases |  10:30 - 11:00  | Radian team |
+| Workshop Kickoff and Introductions|  10:00 - 10:30  | Brian Narajowski - xxxxxx |
+| Review xxxxxx Use Cases |  10:30 - 11:00  | xxxxxx team |
 | Break |  11:00 - 11:15  |  |
 | Confluent Introduction and <br/> Hands-on Workshop Demo |  11:15 - 12:30  | Ravi Appalla - Confluent |
 | Lunch |  12:30 - 1:30  | Will be coordinated by Confluent Team |
-| Workshop Environment setup |  1:30 - 1:45  | Radian team |
-| Hands-on Workshop |  2:00 - 3:00  | Hands-on labs - Radian team |
-| POC Success Criteria |  3:00 - 3:30  |  Confluent and Radian Team  |
+| Workshop Environment setup |  1:30 - 1:45  | xxxxxx team |
+| Hands-on Workshop |  2:00 - 3:00  | Hands-on labs - xxxxxx team |
+| POC Success Criteria |  3:00 - 3:30  |  Confluent and xxxxxx Team  |
 | Wrap-up and next steps |  3:30 - 4:00  |  Confluent Team  |
 
 
