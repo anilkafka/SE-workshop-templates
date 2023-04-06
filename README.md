@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="images/radian.png" width=50% height=50%>
+    <img src="images/customer.png" width=50% height=50%>
 </div>
 
 <div align="center">
