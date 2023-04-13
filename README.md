@@ -37,13 +37,15 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 ## Topics Covered in the Demo and Workshop:
 1. [Log into Confluent Cloud](#step-1)
 2. [Create an Environment and Cluster](#step-2)
-3. [Create ksqlDB Application](#step-3)
+3. [Create a cluster using CLI](#step-3)
 4. [Create Topics and walk through Confluent Cloud Dashboard](#step-4)
 5. [Create an API Key Pair](#step-5)
-6. [Create Datagen Connectors for Users and Stocks](#step-6)
-7. [Create a Stream and a Table](#step-7)
-8. [Create a Persistent Query](#step-8)
-9. [Aggregate data](#step-9)
+6. [Create a sample producer client ](#step-6)
+7. [Create Datagen Connectors for Users and Stocks](#step-7)
+8. [Create ksqlDB Application](#step-8)
+9. [Create a Stream and a Table](#step-9)
+9. [Create a Persistent Query](#step-10)
+10. [Aggregate data](#step-9)
 10. [Windowing Operations and Fraud Detection](#step-10)
 11. [Pull Queries](#step-11)
 12. [Enable Schema Registry](#step-12)
@@ -197,7 +199,7 @@ An environment contains clusters and its deployed components such as Connectors,
 
 ***
 
-## <a name="step-6"></a>Create Client Libraries
+## <a name="step-6"></a>Create a sample Producer Client
 
 The next step is to produce sample data using the Clients using Python. 
 
@@ -347,7 +349,7 @@ The next step is to produce sample data using the Datagen Source connector. You 
 
 ***
 
-## <a name="step-7"></a>Create a Stream and a Table
+## <a name="step-9"></a>Create a Stream and a Table
 
 Now that you are producing a continuous stream of data to **users_topic** and **stocks_topic**, you will use ksqlDB to understand the data better by performing continuous transformations, masking certain fields, and creating new derived topics with the enriched data.
 
