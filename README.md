@@ -192,12 +192,57 @@ An environment contains clusters and its deployed components such as Connectors,
 </div>
 
 4. For the demo create an API key at the global access. Select **Global Access** and then click **Next**. 
-4. Copy or save your API Key and Secret somewhere. You will need these later on in the lab, you will not be able to view the secret again once you close this dialogue. 
-5. After creating and saving the API key, you will see this API key in the Confluent Cloud UI in the **API Access** tab. If you don’t see the API key populate right away, refresh the browser.
+5. Copy or save your API Key and Secret somewhere. You will need these later on in the lab, you will not be able to view the secret again once you close this dialogue. 
+6. After creating and saving the API key, you will see this API key in the Confluent Cloud UI in the **API Access** tab. If you don’t see the API key populate right away, refresh the browser.
 
 ***
 
-## <a name="step-6"></a>Create Datagen Connectors for Users and Stocks
+## <a name="step-6"></a>Create Client Libraries
+
+The next step is to produce sample data using the Clients using Python. 
+
+1. Select **Clients** on the navigation menu
+2. For the demo, we will choose Python client
+
+<div align="center" padding=25px>
+    <img src="images/python-client.png" width=75% height=75%>
+</div>
+
+3. copy the below code into texteditor/IDE and replace username/password with the API key/secret we created earlier in the demo and bootstrap.servers with the actual cluster endpoint. save the code as demo.py
+
+```
+    from confluent_kafka import Producer
+
+    conf = {'bootstrap.servers': "pkc-56d1g.eastus.azure.confluent.cloud:9092",
+            'security.protocol': "SASL_SSL",
+            'sasl.mechanisms': "PLAIN",
+            'client.id':"Demo",
+            'sasl.username': "YZN3CBG76V2W7TYI",
+            'sasl.password': "Y5AdkojA0rkiz9Q8RTldliNmOtxFbPT7huuobU3kij5HhTF+3cRqJEuA1n99v9rV"
+            }
+            
+    producer = Producer(conf)
+
+    with open('sample.txt') as f:
+        for line in f:
+            # print(line)
+            producer.produce(topic='users_topic',value=line)
+            producer.flush()
+```
+4. In a new texteditor, copy the below contents and save as sample.txt.
+
+``` 
+  Kafka
+  Rest-Proxy
+  Schema-Registry
+  Cluster-Linking
+  confluent Replicator
+  ksql
+  connect
+```
+5. execute the code and that will show up under the Clients. 
+
+## <a name="step-7"></a>Create Datagen Connectors for Users and Stocks
 
 The next step is to produce sample data using the Datagen Source connector. You will create two Datagen Source connectors. One connector will send sample user data to **users_topic** and the other connector will send sample stock data to **stocks_topic**.
 
@@ -245,7 +290,7 @@ The next step is to produce sample data using the Datagen Source connector. You 
 | api secret                         | [*from step 5* ](#step-5)    |
 | topic                              | stocks_topic                 |
 | output message format              | JSON                         |
-| quickstart                         | STOCKS                       |
+| quickstart                         | Stock trades                       |
 | max interval between messages (ms) | 1000                         |
 | tasks                              | 1                            |
 </div>
@@ -288,7 +333,7 @@ The next step is to produce sample data using the Datagen Source connector. You 
 
 ***
 
-## <a name="step-3"></a>Create a ksqlDB Application
+## <a name="step-8"></a>Create a ksqlDB Application
 
 1. On the navigation menu, select **ksqlDB** and click **Create Application Myself**. 
 2. Select **Global Access** and then **Continue**.
