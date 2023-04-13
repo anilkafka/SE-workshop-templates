@@ -126,6 +126,25 @@ An environment contains clusters and its deployed components such as Connectors,
 
 ***
 
+## <a name="step-3"></a>Creating a CC cluster using CLI
+
+> **Note:**  The Confluent command-line interface (CLI), confluent, enables developers to manage both Confluent Cloud and Confluent Platform. The Confluent CLI is feature-packed to help users go from learning Confluent to building automated workflows.
+
+1. Open the terminal and login to your confluent account 
+   ```confluent login```
+
+<div align="center" padding=25px>
+    <img src="images/cli-login.png" width=50% height=50%>
+</div>
+
+2. Create the basic CC cluster using the below command
+   ```confluent kafka cluster create cli-demo --cloud azure --region eastus```
+
+<div align="center" padding=25px>
+    <img src="images/cli-createcluster.png" width=50% height=50%>
+</div>
+
+
 ## <a name="step-3"></a>Create a ksqlDB Application
 
 1. On the navigation menu, select **ksqlDB** and click **Create Application Myself**. 
