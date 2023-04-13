@@ -145,20 +145,6 @@ An environment contains clusters and its deployed components such as Connectors,
 </div>
 
 
-## <a name="step-3"></a>Create a ksqlDB Application
-
-1. On the navigation menu, select **ksqlDB** and click **Create Application Myself**. 
-2. Select **Global Access** and then **Continue**.
-3. Name you ksqlDB application and set the streaming units to **4**. Click **Launch Application!**
-
-> **Note:** A Confluent Streaming Unit is the unit of pricing for Confluent Cloud ksqlDB. A CSU is an abstract unit that represents the size of your kSQL cluster and scales linearly. 
-
-<div align="center" padding=25px>
-    <img src="images/create-application.png" width=50% height=50%>
-</div>
-
-***
-
 ## <a name="step-4"></a>Creates Topic and Walk Through Cloud Dashboard
 
 1. On the navigation menu, you will see **Cluster Overview**. 
@@ -173,13 +159,13 @@ An environment contains clusters and its deployed components such as Connectors,
 3. On the same navigation menu, select **Topics** and click **Create Topic**. 
 4. Enter **users_topic** as the topic name, **1** as the number of partitions, and then click **Create with defaults**. 
 
+> **Note:** Topics have many configurable parameters.  **show advanced settings** option has additional configurations. A complete list of those configurations for Confluent Cloud can be found [here](https://docs.confluent.io/cloud/current/using/broker-config.html). If you are interested in viewing the default configurations, you can view them in the Topic Summary on the right side. 
+
 <div align="center" padding=25px>
     <img src="images/create-topic.png" width=50% height=50%>
 </div>
 
 5. Repeat the previous step and create a second topic name **stocks_topic** and **1** as the number of partitions. 
-
-> **Note:** Topics have many configurable parameters. A complete list of those configurations for Confluent Cloud can be found [here](https://docs.confluent.io/cloud/current/using/broker-config.html). If you are interested in viewing the default configurations, you can view them in the Topic Summary on the right side. 
 
 6. After topic creation, the **Topics UI** allows you to monitor production and consumption throughput metrics and the configuration parameters for your topics. When you begin sending messages to Confluent Cloud, you will be able to view those messages and message schemas.
 7. Below is a look at the topic, **users_topic**, but you need to send data to this topic before you see any metrics.
@@ -190,16 +176,22 @@ An environment contains clusters and its deployed components such as Connectors,
 
 ***
 
-## <a name="step-5"></a>Create an API Key Pair
+## <a name="step-5"></a>API Keys
 
 1. Select **API Access** on the navigation menu. 
-2. A key pair has already been created for the ksqlDB application you created in *Step 3*. Select **+ Add Key** to create another key pair. 
+2. There are 2 types of API keys - Global access and Granular Access
 
 <div align="center" padding=25px>
-    <img src="images/create-key.png" width=75% height=75%>
+    <img src="images/apikeys.png" width=75% height=75%>
 </div>
 
-3. Select **Global Access** and then click **Next**. 
+3. Global access API key will let you access everything you can access. Granular access API key lets you set the access at the desired level and to the desired resources.
+
+<div align="center" padding=25px>
+    <img src="images/granular-apikey.png" width=75% height=75%>
+</div>
+
+4. For the demo create an API key at the global access. Select **Global Access** and then click **Next**. 
 4. Copy or save your API Key and Secret somewhere. You will need these later on in the lab, you will not be able to view the secret again once you close this dialogue. 
 5. After creating and saving the API key, you will see this API key in the Confluent Cloud UI in the **API Access** tab. If you don’t see the API key populate right away, refresh the browser.
 
@@ -292,6 +284,20 @@ The next step is to produce sample data using the Datagen Source connector. You 
 
 <div align="center">
     <p style="color:red">STOP HERE FOR PRESENTATION</p>
+</div>
+
+***
+
+## <a name="step-3"></a>Create a ksqlDB Application
+
+1. On the navigation menu, select **ksqlDB** and click **Create Application Myself**. 
+2. Select **Global Access** and then **Continue**.
+3. Name you ksqlDB application and set the streaming units to **4**. Click **Launch Application!**
+
+> **Note:** A Confluent Streaming Unit is the unit of pricing for Confluent Cloud ksqlDB. A CSU is an abstract unit that represents the size of your kSQL cluster and scales linearly. 
+
+<div align="center" padding=25px>
+    <img src="images/create-application.png" width=50% height=50%>
 </div>
 
 ***
