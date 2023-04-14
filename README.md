@@ -40,8 +40,8 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 3. [Create a cluster using CLI](#step-3)
 4. [Create Topics and walk through Confluent Cloud Dashboard](#step-4)
 5. [Create an API Key Pair](#step-5)
-6. [Create a sample producer client ](#step-6)
-7. [Create Datagen Connectors for Users and Stocks](#step-7)
+6. [Clients ](#step-6)
+7. [Connectors](#step-7)
 8. [Create ksqlDB Application](#step-8)
 9. [Create a Stream and a Table](#step-9)
 9. [Create a Persistent Query](#step-10)
@@ -199,12 +199,12 @@ An environment contains clusters and its deployed components such as Connectors,
 
 ***
 
-## <a name="step-6"></a>Create a sample Producer Client
+## <a name="step-6"></a>Producer and Consumer clients
 
-The next step is to produce sample data using the Clients using Python. 
+Now that cluster has been provisioned and topics are created, we can develop producer clients to produce data to the kafka topics. You can choose the programming language of your choice as shown in the below picture. If the programming language of your choice is not in here, you can leverage the Rest API. 
 
 1. Select **Clients** on the navigation menu
-2. For the demo, we will choose Python client
+2. For the demo, We will choose Python client to produce data into one of the topics
 
 <div align="center" padding=25px>
     <img src="images/python-client.png" width=75% height=75%>
@@ -244,7 +244,7 @@ The next step is to produce sample data using the Clients using Python.
 ```
 5. execute the code and that will show up under the Clients. 
 
-## <a name="step-7"></a>Create Datagen Connectors for Users and Stocks
+## <a name="step-7"></a>Connectors 
 
 The next step is to produce sample data using the Datagen Source connector. You will create two Datagen Source connectors. One connector will send sample user data to **users_topic** and the other connector will send sample stock data to **stocks_topic**.
 
@@ -337,9 +337,9 @@ The next step is to produce sample data using the Datagen Source connector. You 
 
 ## <a name="step-8"></a>Create a ksqlDB Application
 
-1. On the navigation menu, select **ksqlDB** and click **Create Application Myself**. 
+1. On the navigation menu, select **ksqlDB** and click **Create cluster myself**. 
 2. Select **Global Access** and then **Continue**.
-3. Name you ksqlDB application and set the streaming units to **4**. Click **Launch Application!**
+3. Name you ksqlDB cluster and set the cluster size to **8**. Click **Launch cluster!**
 
 > **Note:** A Confluent Streaming Unit is the unit of pricing for Confluent Cloud ksqlDB. A CSU is an abstract unit that represents the size of your kSQL cluster and scales linearly. 
 
