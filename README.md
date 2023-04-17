@@ -158,8 +158,9 @@ An environment contains clusters and its deployed components such as Connectors,
 </div>
 
 2. Click on **Cluster Settings**. This is where you can find your *Cluster ID, Bootstrap Server, Cloud Details, Cluster Type,* and *Capacity Limits*.
-3. On the same navigation menu, select **Topics** and click **Create Topic**. 
+3. On the same navigation menu, select **Topics** and click **Create Topic**. We will create 2 topics here to use later in the demo.
 4. Enter **users_topic** as the topic name, **1** as the number of partitions, and then click **Create with defaults**. 
+5. Enter **stocks_topic** as the topic name, **1** as the number of partitions, and then click **Create with defaults**. 
 
 > **Note:** Topics have many configurable parameters.  **show advanced settings** option has additional configurations. A complete list of those configurations for Confluent Cloud can be found [here](https://docs.confluent.io/cloud/current/using/broker-config.html). If you are interested in viewing the default configurations, you can view them in the Topic Summary on the right side. 
 
@@ -608,23 +609,42 @@ SELECT * FROM STOCKS_ENRICHED
 ```
 ***
 
-## <a name="step-12"></a>**Enable Schema Registry**
+## <a name="step-12"></a>**Stream Governance**
 
-A topic contains messages, and each message is a key-value pair. The message key or the message value (or both) can be serialized as JSON, Avro, or Protobuf. A schema defines the structure of the data format. 
+1. Stream Governance is built on 3 key strategic pillars: Stream lineage,Stream Catalog and Stream quality. This can be enabled by going to schema registry tab in the navigation:
+
+<div align="center">
+    <img src="images/stream-governance.png" width=75% height=75%>
+</div>
+
+2. Select the Essentials and Begin Configuration. It takes you to the below screen where you select your cloud provider and the region.
+
+<div align="center">
+    <img src="images/stream-governance-1.png" width=75% height=75%>
+</div>
+
+
+3. Navigate to Stream Lineage in the navigation. Stream lineage is used to understand complex data relationships and uncover more insights with interactive, end-to-end maps of event streams.
+
+<div align="center">
+    <img src="images/stream-lineage.png" width=75% height=75%>
+</div>
+
+4. Navigate to Stream Catalog on the top right corner of the Web UI as show below and demo the search capabilities.
+
+<div align="center">
+    <img src="images/stream-catalog.png" width=75% height=75%>
+</div>
+
+5. Navigate to Schema Registry on the navigation pane:
 
 Confluent Cloud Schema Registry is used to manage schemas and it defines a scope in which schemas can evolve. It stores a versioned history of all schemas, provides multiple compatibility settings, and allows schemas to evolve according to these compatibility settings. It is also fully-managed.
 
-You will be exploring Confluent Cloud Schema Registry in more detail towards the end of the workshop. First, you will need to enable Schema Registry within your environment.
+A topic contains messages, and each message is a key-value pair. The message key or the message value (or both) can be serialized as JSON, Avro, or Protobuf. A schema defines the structure of the data format. 
 
-1. Return to your environment by clicking on the Confluent icon at the top left corner and then clicking your environment tile.
-  <div align="center">
-      <img src="images/sr-cluster.png" width=75% height=75%>
-  </div>
 
-2. Click on **Schema Registry**. Select your cloud provider and region, and then click on **Enable Schema Registry**.
-  <div align="center">
-      <img src="images/sr-tab.png" width=75% height=75%>
-  </div>
+1. 
+  
 
 3. Next, you will create an API Key for Schema Registry. From here, click on the Edit icon under **API credentials**.
 4. Click on **Add key** and save your API key and secret - you will also need these during the workshop. Click on **Done**.
