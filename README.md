@@ -24,15 +24,18 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 | Topic |  Time  | Speaker |
 | --- |  ---  | --- |
 | Workshop Kickoff and Introductions|  10:00 - 10:30  | xxxCustomerPresenter - xxxCustomerCompany |
-| Review xxxCustomer Use Cases |  10:30 - 11:00  | xxxCustomer team |
-| Break |  11:00 - 11:15  |  |
-| Confluent Introduction and <br/> Hands-on Workshop Demo |  11:15 - 12:30  | Ravi Appalla - Confluent |
+| Get the prereqs installed |  10:30 - 10:45  | Confluent team |
+| Confluent Introduction and <br/> Hands-on Workshop Demo |  10:45 - 12:30 PM  | xxxpresenter - Confluent |
 | Lunch |  12:30 - 1:30  | Will be coordinated by Confluent Team |
 | Workshop Environment setup |  1:30 - 1:45  | xxxCustomer team |
 | Hands-on Workshop |  2:00 - 3:00  | Hands-on labs - xxxCustomer team |
 | POC Success Criteria |  3:00 - 3:30  |  Confluent and xxxCustomer Team  |
 | Wrap-up and next steps |  3:30 - 4:00  |  Confluent Team  |
 
+## Prereqs -- These have to be done before the workshop/demo
+1. Install confluent cli on the work machine
+2. Install the Docker desktop
+3. Install confluent_kafka library
 
 ## Topics Covered in the Demo and Workshop:
 1. [Log into Confluent Cloud](#step-1)
@@ -44,17 +47,17 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 7. [Connectors](#step-7)
 8. [Create ksqlDB Application](#step-8)
 9. [Create a Stream and a Table](#step-9)
-9. [Create a Persistent Query](#step-10)
-10. [Aggregate data](#step-9)
-10. [Windowing Operations and Fraud Detection](#step-10)
-11. [Pull Queries](#step-11)
-12. [Enable Schema Registry](#step-12)
-13. [Set Up: Connect Self Managed Services to Confluent Cloud](#step-13)
-14. [Deploy: Connect Self Managed Services to Confluent Cloud](#step-14)
-15. [Launch: PostgreSQL Source Connector in Confluent Control Center](#step-15)
-16. [Confluent Cloud Schema Registry](#step-16)
-17. [Clean Up Resources](#step-17)
-18. [Confluent Resources and Further Testing](#step-18)
+10. [Create a Persistent Query](#step-10)
+11. [Aggregate data](#step-11)
+12. [Windowing Operations and Fraud Detection](#step-12)
+13. [Pull Queries](#step-13)
+14. [Stream Governance](#step-14)
+15. [Set Up: Connect Self Managed Services to Confluent Cloud](#step-15)
+16. [Deploy: Connect Self Managed Services to Confluent Cloud](#step-16)
+17. [Launch: PostgreSQL Source Connector in Confluent Control Center](#step-17)
+18. [Confluent Cloud Schema Registry](#step-18)
+19. [Clean Up Resources](#step-19)
+20. [Confluent Resources and Further Testing](#step-20)
 
 ***
 
@@ -433,7 +436,7 @@ SELECT * FROM USERS EMIT CHANGES;
 
 ***
 
-## <a name="step-8"></a>Create a Persistent Query
+## <a name="step-10"></a>Create a Persistent Query
 
 A *Persistent Query* runs indefinitely as it processes rows of events and writes to a new topic. You can create persistent queries by deriving new streams and new tables from existing streams or tables.
 
@@ -482,7 +485,7 @@ SELECT * FROM STOCKS_ENRICHED EMIT CHANGES;
 
 ***
 
-## <a name="step-9"></a>Aggregate Data
+## <a name="step-11"></a>Aggregate Data
 
 ksqlDB supports several aggregate functions, like `COUNT` and `SUM`, and you can use these to build stateful aggregates on streaming data. In this step, you will walk through some key examples on different ways you can aggregate your data.
 
@@ -527,7 +530,7 @@ CREATE TABLE total_stock_purchased AS
 
 ***
 
-## <a name="step-10"></a> Windowing Operations and Fraud Detection
+## <a name="step-12"></a> Windowing Operations and Fraud Detection
 
 You will walk through a few examples on how to use ksqlDB for Windowing, including how to use it for anomaly or fraud detection. ksqlDB enables aggregation operations on streams and tables, as you saw in the previous step, and you have the ability to set time boundaries named windows. A window has a start time and an end time, which you access in your queries by using `WINDOWSTART` and `WINDOWEND`. When using Windowing, aggregate functions are applied only to the records that occur within the specified time window. ksqlDB tracks windows per record key.
 
@@ -584,7 +587,7 @@ SELECT * FROM ACCOUNTS_TO_MONITOR EMIT CHANGES;
 
 ***
 
-## <a name="step-11"></a>Pull Queries
+## <a name="step-13"></a>Pull Queries
 
 Building on our Fraud Detection example from the last step, let’s say our fraud service wants to check on high frequency accounts. The fraud service can send a pull query via the ksql API, today we will just mock it with the UI. Then we can monitor the activity for a suspicious account. 
 
@@ -609,7 +612,7 @@ SELECT * FROM STOCKS_ENRICHED
 ```
 ***
 
-## <a name="step-12"></a>**Stream Governance**
+## <a name="step-14"></a>**Stream Governance**
 
 1. Stream Governance is built on 3 key strategic pillars: Stream lineage,Stream Catalog and Stream quality. This can be enabled by going to schema registry tab in the navigation:
 
@@ -644,7 +647,7 @@ A topic contains messages, and each message is a key-value pair. The message key
 
 We will get back to this section later in the demo where we can go through the schemas, Schema Evolution, versions and such.
 
-## <a name="step-13"></a>**Set up and Connect Self Managed Services to Confluent Cloud**
+## <a name="step-15"></a>**Set up and Connect Self Managed Services to Confluent Cloud**
 
 Let’s say you have a database, or object storage such as AWS S3, Azure Blob Storage, or Google Cloud Storage, or a data warehouse such as Snowflake. How do you connect these data systems to your architecture?
 
@@ -718,7 +721,7 @@ Now that you have completed setting up your Confluent Cloud account, cluster, to
 
     If successful, your output will return: `{ }%`
 
-## <a name="step-14"></a>**Deploy: Connect Self Managed Services to Confluent Cloud**
+## <a name="step-16"></a>**Deploy: Connect Self Managed Services to Confluent Cloud**
 
 You are now ready to start your Confluent Platform services - Connect and Control Center. Both will be connected to your cluster in Confluent Cloud, which is what you accomplished in the earlier steps.
 
@@ -733,7 +736,7 @@ You are now ready to start your Confluent Platform services - Connect and Contro
 
 You have successfully installed the Debezium PostgreSQL CDC Source connector on your local Connect cluster. You also have a PostgreSQL database running in the container. These are all connected to Confluent Cloud. You are now ready to start producing data from your PostgreSQL database to Confluent Cloud.
 
-## <a name="step-15"></a>**Launch: PostgreSQL Source Connector in Confluent Control Center**
+## <a name="step-17"></a>**Launch: PostgreSQL Source Connector in Confluent Control Center**
 
 You have seen and worked within the Confluent Cloud Dashboard in the previous steps. Because you have Confluent Platform services deployed, you can use Confluent Control Center (C3) to manage and monitor Confluent Platform, and it is also connected to Confluent Cloud from your set up. You will see confirmation that Control Center is indeed connected to Confluent Cloud by the end of this step.
 
@@ -809,7 +812,7 @@ You have seen and worked within the Confluent Cloud Dashboard in the previous st
 
     > **Note:** The unrecognized characters are a plaintext representation of Avro.
 
-## <a name="step-16"></a>**Confluent Cloud Schema Registry**
+## <a name="step-18"></a>**Confluent Cloud Schema Registry**
 
 In this final section of the workshop, you will explore Confluent Cloud Schema Registry, which is used to manage and store a versioned history of all of your schemas. Confluent Cloud Schema Registry is fully-managed and supports JSON, Avro, and Protobuf.
 
@@ -838,7 +841,7 @@ In this final section of the workshop, you will explore Confluent Cloud Schema R
 6. Click on **View & Manage Schemas** to view a searchable list of all your schemas available in your Confluent Cloud environment.
 
 
-## <a name="step-17"></a>Clean Up Resources
+## <a name="step-19"></a>Clean Up Resources
 
 Deleting the resources you created during this workshop will prevent you from incurring additional charges. 
 
@@ -862,7 +865,7 @@ Deleting the resources you created during this workshop will prevent you from in
 
 *** 
 
-## <a name="step-18"></a>Confluent Resources and Further Testing
+## <a name="step-20"></a>Confluent Resources and Further Testing
 
 Here are some links to check out if you are interested in further testing:
 - [ksqlDB Tutorials](https://kafka-tutorials.confluent.io/)
