@@ -131,7 +131,7 @@ An environment contains clusters and its deployed components such as Connectors,
 
 ***
 
-## <a name="step-3"></a>Creating a CC cluster using CLI
+    ## <a name="step-2a"></a>Creating a CC cluster using CLI
 
 > **Note:**  The Confluent command-line interface (CLI), confluent, enables developers to manage both Confluent Cloud and Confluent Platform. The Confluent CLI is feature-packed to help users go from learning Confluent to building automated workflows.
 
