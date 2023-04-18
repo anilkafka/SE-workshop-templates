@@ -43,7 +43,7 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
     * [Create a cluster using CLI](#step-2a)
 3. [Create Topics](#step-4)
     * [walk through Confluent Cloud Dashboard]
-    * [Create an API Key Pair](#step-5)
+    * [Create an API Key Pair(ACLs)](#step-5)
 4. [Clients ](#step-6)
 5. [Connectors](#step-7)
 6. [Create ksqlDB Application](#step-8)
