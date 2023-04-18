@@ -59,6 +59,11 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 19. [Clean Up Resources](#step-19)
 20. [Confluent Resources and Further Testing](#step-20)
 
+*. [Log into Confluent Cloud](#step-1)
+*. [Create an Environment and Cluster](#step-2)
+    *. [Create a cluster using CLI](#step-2a)
+*. [Create Topics and walk through Confluent Cloud Dashboard](#step-4)
+
 ***
 
 ## **Prerequisites**
