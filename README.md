@@ -40,7 +40,7 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 ## Topics Covered in the Demo and Workshop:
 1. [Log into Confluent Cloud](#step-1)
 2. [Create an Environment and Cluster](#step-2)
-    21. [Create a cluster using CLI](#step-2a)
+    * [Create a cluster using CLI](#step-2a)
 4. [Create Topics and walk through Confluent Cloud Dashboard](#step-4)
 5. [Create an API Key Pair](#step-5)
 6. [Clients ](#step-6)
@@ -58,11 +58,6 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 18. [Confluent Cloud Schema Registry](#step-18)
 19. [Clean Up Resources](#step-19)
 20. [Confluent Resources and Further Testing](#step-20)
-
-* [Log into Confluent Cloud](#step-1)
-* [Create an Environment and Cluster](#step-2)
-    * [Create a cluster using CLI](#step-2a)
-* [Create Topics and walk through Confluent Cloud Dashboard](#step-4)
 
 ***
 
