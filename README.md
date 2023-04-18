@@ -66,9 +66,11 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 2. Install confluent cli on the work machine
     - follow the steps here to install the CLI: https://docs.confluent.io/confluent-cli/current/overview.html#confluent-cli-overview 
 3. Install the Docker desktop
-    - Docker desktop can be found here: https://docs.docker.com/desktop/install/mac-install/
+    - Docker desktop for mac can be found here: https://docs.docker.com/desktop/install/mac-install/
+    - Please follow appropriate documentation for other OS.
 4. Install python for step (5)
-    - choose the latest python here: https://www.python.org/downloads/macos/
+    - choose the latest python here for Mac OS: https://www.python.org/downloads/macos/
+    - Please follow appropriate documentation for other OS.
 5. Install confluent_kafka library
     - https://docs.confluent.io/kafka-clients/python/current/overview.html#ak-python
 
