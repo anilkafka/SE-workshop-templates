@@ -40,7 +40,7 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 ## Topics Covered in the Demo and Workshop:
 1. [Log into Confluent Cloud](#step-1)
 2. [Create an Environment and Cluster](#step-2)
-    a. [Create a cluster using CLI](#step-2a)
+ a. [Create a cluster using CLI](#step-2a)
 4. [Create Topics and walk through Confluent Cloud Dashboard](#step-4)
 5. [Create an API Key Pair](#step-5)
 6. [Clients ](#step-6)
