@@ -32,11 +32,6 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 | POC Success Criteria |  3:00 - 3:30  |  Confluent and xxxCustomer Team  |
 | Wrap-up and next steps |  3:30 - 4:00  |  Confluent Team  |
 
-## Prereqs -- These have to be done before the workshop/demo
-1. Install confluent cli on the work machine
-2. Install the Docker desktop
-3. Install confluent_kafka library
-
 ## Topics Covered in the Demo and Workshop:
 1. [Log into Confluent Cloud](#step-1)
 2. [Create an Environment and Cluster](#step-2)
@@ -68,6 +63,14 @@ This workshop perfect for those looking to get started with Confluent Cloud and 
 1. Create a Confluent Cloud Account.
     - Please make sure that you are able to successfully login to Confluent Cloud before the workshop.
 > **Note:** You will create resources during this workshop that will incur costs. Please make sure that you monitor resource usage to stay within the credits offered for this workshop and POC evaluation. 
+2. Install confluent cli on the work machine
+    - follow the steps here to install the CLI: https://docs.confluent.io/confluent-cli/current/overview.html#confluent-cli-overview 
+3. Install the Docker desktop
+    - Docker desktop can be found here: https://docs.docker.com/desktop/install/mac-install/
+4. Install python for step (5)
+    - choose the latest python here: https://www.python.org/downloads/macos/
+5. Install confluent_kafka library
+    - https://docs.confluent.io/kafka-clients/python/current/overview.html#ak-python
 
 
 ## <a name="step-1"></a>Log into Confluent Cloud
@@ -96,7 +99,7 @@ An environment contains clusters and its deployed components such as Connectors,
 
 2. Now that you have an environment, click **Create Cluster**. 
 
-> **Note:** Confluent Cloud clusters are available in 3 types: Basic, Standard, and Dedicated. Basic is intended for development use cases so you will use that for the workshop. Basic clusters only support single zone availability. Standard and Dedicated clusters are intended for production use and support Multi-zone deployments. If you are interested in learning more about the different types of clusters and their associated features and limits, refer to this [documentation](https://docs.confluent.io/current/cloud/clusters/cluster-types.html).
+> **Note:** Confluent Cloud clusters are available in 3 types: Basic, Standard, and Dedicated. We will use Dedicated so that we can show multiple networking options. Basic clusters only support single zone availability. Standard and Dedicated clusters are intended for production use and support Multi-zone deployments. If you are interested in learning more about the different types of clusters and their associated features and limits, refer to this [documentation](https://docs.confluent.io/current/cloud/clusters/cluster-types.html).
 
 3. Chose the **Dedicated** cluster type. 
 
@@ -106,9 +109,9 @@ An environment contains clusters and its deployed components such as Connectors,
 
 4. Click **Begin Configuration**. 
 5. Choose your preferred Cloud Provider (AWS, GCP, or Azure), region, and availability zone. 
-6. Choose your preferred Network type. There are 3 types of Network (pubilc internet, VPC/VNET peering, Private Network). Choose the **Internet** for the demo
+6. Choose your preferred Network type. There are 3 types of Network (public internet, VPC/VNET peering, Private Network). Choose the **Internet** for the demo
 
-> **Note:** you can access CC Dedicated clusters through secure internet endpoints, Private Link Connectinos, VPC/VNET peering, or AWS Transit Gateway. All Basic and Standard clusters are accessible through secure internet endpoints. All connections to CC are encrypted with TLS and require authentication using API keys, regardless of network configuration.
+> **Note:** you can access CC Dedicated clusters through secure internet endpoints, Private Link Connections, VPC/VNET peering, or AWS Transit Gateway. All Basic and Standard clusters are accessible through secure internet endpoints. All connections to CC are encrypted with TLS and require authentication using API keys, regardless of network configuration.
 
 <div align="center" padding=25px>
     <img src="images/networktype.png" width=50% height=50%>
