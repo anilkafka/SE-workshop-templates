@@ -135,7 +135,7 @@ An environment contains clusters and its deployed components such as Connectors,
 
 ***
 
-    ## <a name="step-2a"></a>Creating a CC cluster using CLI
+##<a name="step-2a"></a>Creating a CC cluster using CLI
 
 > **Note:**  The Confluent command-line interface (CLI), confluent, enables developers to manage both Confluent Cloud and Confluent Platform. The Confluent CLI is feature-packed to help users go from learning Confluent to building automated workflows.
 
@@ -254,7 +254,7 @@ Now that cluster has been provisioned and topics are created, we can develop pro
 
 ## <a name="step-7"></a>Connectors 
 
-The next step is to produce sample data using the Datagen Source connector. You will create two Datagen Source connectors. One connector will send sample user data to **users_topic** and the other connector will send sample stock data to **stocks_topic**.
+The next step is to produce sample data using the Datagen Source connector which is a Kafka Connect connector for generating mock data, not suitable for production. This is only for Demo purpose. You will create two Datagen Source connectors. One connector will send sample user data to **users_topic** and the other connector will send sample stock data to **stocks_topic**.
 
 1. First, you will create the connector that will send data to **users_topic**. From the Confluent Cloud UI, click on the **Connectors** tab on the navigation menu. Click on the **Datagen Source** icon.
 
