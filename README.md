@@ -135,7 +135,7 @@ An environment contains clusters and its deployed components such as Connectors,
 
 ***
 
-##<a name="step-2a"></a>Creating a CC cluster using CLI
+## <a name="step-2a"></a>Creating a CC cluster using CLI
 
 > **Note:**  The Confluent command-line interface (CLI), confluent, enables developers to manage both Confluent Cloud and Confluent Platform. The Confluent CLI is feature-packed to help users go from learning Confluent to building automated workflows.
 
@@ -146,8 +146,8 @@ An environment contains clusters and its deployed components such as Connectors,
     <img src="images/cli-login.png" width=50% height=50%>
 </div>
 
-2. Create the basic CC cluster using the below command
-   ```confluent kafka cluster create cli-demo --cloud azure --region eastus```
+2. Create the basic CC cluster using the below command, update the environment flag to your desired environment. you can find the list of environments using ```confluent environment list```
+   ```confluent kafka cluster create cli-demo --cloud azure --region eastus --environment env-qr5dq2```
 
 <div align="center" padding=25px>
     <img src="images/cli-createcluster.png" width=50% height=50%>
