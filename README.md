@@ -101,37 +101,25 @@ An environment contains clusters and its deployed components such as Connectors,
 
 > **Note:** Confluent Cloud clusters are available in 3 types: Basic, Standard, and Dedicated. We will use Dedicated so that we can show multiple networking options. Basic clusters only support single zone availability. Standard and Dedicated clusters are intended for production use and support Multi-zone deployments. If you are interested in learning more about the different types of clusters and their associated features and limits, refer to this [documentation](https://docs.confluent.io/current/cloud/clusters/cluster-types.html).
 
-3. Chose the **Dedicated** cluster type. 
+3. Chose the **Basic** cluster type. 
 
 <div align="center" padding=25px>
     <img src="images/cluster-type.png" width=50% height=50%>
 </div>
 
 4. Click **Begin Configuration**. 
+
 5. Choose your preferred Cloud Provider (AWS, GCP, or Azure), region, and availability zone. 
-6. Choose your preferred Network type. There are 3 types of Network (public internet, VPC/VNET peering, Private Network). Choose the **Internet** for the demo
 
-> **Note:** you can access CC Dedicated clusters through secure internet endpoints, Private Link Connections, VPC/VNET peering, or AWS Transit Gateway. All Basic and Standard clusters are accessible through secure internet endpoints. All connections to CC are encrypted with TLS and require authentication using API keys, regardless of network configuration.
-
-<div align="center" padding=25px>
-    <img src="images/networktype.png" width=50% height=50%>
-</div>
-
-7. Select security. You can encrypt data at rest in Dedicated Kafka clusters with self-managed keys to ensure only the appropriate entity or user can decrypt it. Choose **Automatic** for the demo
-
-<div align="center" padding=25px>
-    <img src="images/security.png" width=50% height=50%>
-</div>
-
-
-8. Specify a **Cluster Name**. For the purpose of this lab, any name will work here. 
+6. Specify a **Cluster Name**. For the purpose of this lab, any name will work here. 
 
 <div align="center" padding=25px>
     <img src="images/create-cluster.png" width=50% height=50%>
 </div>
 
-9. View the associated *Configuration & Cost*, *Usage Limits*, and *Uptime SLA* information before launching. 
-10. Click **Launch Cluster**. 
+7. View the associated *Configuration & Cost*, *Usage Limits*, and *Uptime SLA* information before launching. 
+
+8. Click **Launch Cluster**. 
 
 ***
 
